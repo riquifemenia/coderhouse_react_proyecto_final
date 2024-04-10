@@ -1,13 +1,27 @@
 @import '/src/styles/styles.scss';
 
 .navbar {
-    background-color: lightgrey !important;
+    background-color: rgba(0, 128, 128, 0.4) !important;
     height: 8rem;
     font-size: $fuente-grande;
-    padding: 2rem;
+    padding: 2rem !important;
 }
 
-.navbar-brand {
-    font-size: $fuente-grande;
-    padding-right: 2rem;
+.navbar-item .navbar-link {
+    color: #444444;
+    text-decoration: none;
+
+    &:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+
+}
+
+.menu {
+    margin-right: auto
+}
+
+.cart-widget {
+    margin-left: auto;
 }
