@@ -1,0 +1,18 @@
+$fuente-principal: 'Poppins', sans-serif;
+
+$fuente-grande: 2rem;
+$fuente-mediana: 0.85*$fuente-grande;
+$fuente-chica: 0.55*$fuente-grande;
+$fuente-muy-chica: 0.40*$fuente-grande;
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}

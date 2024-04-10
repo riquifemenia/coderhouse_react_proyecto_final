@@ -1,0 +1,13 @@
+@import '/src/styles/styles.scss';
+
+.navbar {
+    background-color: lightgrey !important;
+    height: 8rem;
+    font-size: $fuente-grande;
+    padding: 2rem;
+}
+
+.navbar-brand {
+    font-size: $fuente-grande;
+    padding-right: 2rem;
+}
