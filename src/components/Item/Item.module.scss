@@ -1,0 +1,58 @@
+@import '/src/styles/styles.scss';
+
+.Item {
+    max-width: 40rem;
+    margin: 1.5rem;
+    padding: 0.3rem;
+    background-color: map-get($color, $key: 4) !important;
+    border-radius: 10px !important;
+    transition: transform 0.6s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
+
+.ItemImage {
+    height: 30rem;
+    width: 34rem;
+    padding: 2rem;
+    object-fit: contain;
+    background-color: map-get($color, $key: 5);
+    border-radius: 10px;
+}
+
+.ItemTitulo {
+    text-align: center;
+    height: 6rem;
+    font-size: 20px;
+    color: map-get($color, $key: 7);
+}
+
+.ItemPrecio {
+    font-size: 30px;
+    color: map-get($color, $key: 3);
+}
+
+.ItemVerDetalleBoton {
+    font-size: $fuente-mediana !important;
+    color: map-get($color, $key: 3) !important;
+    margin-left: auto;
+
+    &:hover {
+        background-color: map-get($color, $key: 5) !important;
+    }
+}
+
+.ItemAgregar {
+    margin-left: auto;
+}
+
+.ItemAgregarBoton {
+    font-size: $fuente-mediana !important;
+    color: map-get($color, $key: 3) !important;
+
+    &:hover {
+        background-color: map-get($color, $key: 5) !important;
+    }
+}

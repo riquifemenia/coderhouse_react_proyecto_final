@@ -1,16 +1,21 @@
+import { Link } from 'react-router-dom'
 import { CartWidget } from '../CartWidget/CartWidget'
-import { Box, Flex, Spacer, Link } from '@chakra-ui/react'
-import './NavBar.scss'
+import { Box, Flex } from '@chakra-ui/react'
+import styles from './NavBar.module.scss'
 
 export const NavBar = () => {
   return (
-    <Flex className='navbar' align='center'>
-      <Flex className='navbar-item' align='center'>
-        <Link className='navbar-link' mr={16}>Tienda Lorem®</Link>
-        <Link className='navbar-link' href='#'>Lorem artículos</Link>
+    <Flex className={styles.NavBar} >
+      <Link className={styles.NavBarBrand} to='/'>Dolce Dona®<br></br>Tienda</Link>
+
+      <Flex className={styles.NavBarMenu}>
+        <Link className={styles.NavBarLink} to='/'>Todos</Link>
+        <Link className={styles.NavBarLink} to='/categoria/Donas' >Donas</Link>
+        <Link className={styles.NavBarLink} to='/categoria/Cupcakes'>Cupcakes</Link>
+        <Link className={styles.NavBarLink} to='/categoria/Paletas'>Paletas</Link>
       </Flex>
-      <Spacer />
-      <Box fontSize='2xl'>
+
+      <Box className={styles.NavBarCartWidget}>
         <CartWidget />
       </Box>
     </Flex>

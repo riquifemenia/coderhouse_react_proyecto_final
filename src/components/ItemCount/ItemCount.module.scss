@@ -1,0 +1,27 @@
+@import '/src/styles/styles.scss';
+
+.Contador {
+    display: flex;
+    align-items: center;
+    background-color: map-get($color, $key: 102);
+    border-radius: 10px;
+}
+
+.ContadorBoton {
+    font-size: $fuente-mediana !important;
+    color: map-get($color, $key: 3) !important;
+    background-color: transparent !important;
+
+    &:hover {
+        background-color: map-get($color, $key: 5) !important;
+    }
+}
+
+.ContadorCantidad {
+    display: flex;
+    justify-content: center;
+    font-size: $fuente-grande;
+    font-weight: 900;
+    width: 3.5rem;
+    color: map-get($color, $key: 7);
+}

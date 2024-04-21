@@ -1,5 +1,6 @@
-import { Button, Flex, Heading } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Button, Flex, Box } from '@chakra-ui/react'
+import { useState } from 'react'
+import styles from './ItemCount.module.scss'
 
 export const ItemCount = ({ stock }) => {
   const [count, setCount] = useState(1)
@@ -12,10 +13,10 @@ export const ItemCount = ({ stock }) => {
   }
 
   return (
-    <Flex>
-      <Button onClick={decrementar}>-</Button>
-      <Heading>{count}</Heading>
-      <Button onClick={incrementar}>+</Button>
+    <Flex className={styles.Contador} >
+      <Button className={styles.ContadorBoton} onClick={decrementar}>-</Button>
+      <Box className={styles.ContadorCantidad}>{count}</Box>
+      <Button className={styles.ContadorBoton} onClick={incrementar}>+</Button>
     </Flex>
   )
 }
