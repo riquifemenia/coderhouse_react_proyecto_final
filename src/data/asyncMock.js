@@ -196,10 +196,15 @@ export const getProductsByCategory = (category) => {
 export const getProductDetailById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const producto = productos.find(
-        (prod) => prod.id === parseInt(id)
-      )
-      resolve(producto)
+      // Verificar si el id contiene solo caracteres numéricos
+      if (/^\d+$/.test(id)) {
+        const producto = productos.find(
+          (prod) => prod.id === parseInt(id)
+        );
+        resolve(producto);
+      } else {
+        resolve(null)
+      }
     }, 1000)
   })
 }

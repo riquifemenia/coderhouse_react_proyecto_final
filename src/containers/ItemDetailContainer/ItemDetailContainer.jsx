@@ -12,15 +12,17 @@ export const ItemDetailContainer = () => {
   const { itemId } = useParams()
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     getProductDetailById(itemId)
       .then((prod) => {
-        setDetail(prod)
-        setError(null)
+        prod
+          ? (setDetail(prod), setError(null))
+          : setError('Error 404. Página inexistente.')
       })
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false))
   }, [])
+
 
   return (
     <>
