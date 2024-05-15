@@ -1,0 +1,78 @@
+@import '/src/styles/styles.scss';
+
+.ItemDetail {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    background-color: map-get($color, $key: 3);
+}
+
+.ItemDetailCard {
+    max-width: 55rem;
+    margin: 1.5rem;
+    padding: 0.3rem;
+    background-color: map-get($color, $key: 4) !important;
+    border-radius: 10px !important;
+    transition: transform 0.6s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
+
+.DetailClose :hover {
+    background-color: transparent !important;
+}
+
+.DetailCloseButton {
+    height: 6rem !important;
+    font-size: 24px !important;
+    color: map-get($color, $key: 3) !important;
+}
+
+.ItemDetailImage {
+    height: 35rem;
+    width: 50rem;
+    padding: 2rem;
+    object-fit: contain;
+    background-color: map-get($color, $key: 5);
+    border-radius: 10px;
+}
+
+.ItemDetailTitulo {
+    text-align: center;
+    height: 4rem;
+    font-size: 36px !important;
+    color: map-get($color, $key: 7);
+}
+
+.ItemDetailDescripcion {
+    text-align: center;
+    height: 6rem;
+    font-size: 28px !important;
+    color: map-get($color, $key: 7);
+}
+
+.ItemDetailPrecio {
+    font-size: 36px;
+    color: map-get($color, $key: 3);
+}
+
+.ItemDetailCount {
+    width: 60%;
+    margin-right: auto;
+    margin-left: 3rem;
+}
+
+.ItemDetailFinalizar {
+    height: 4rem !important;
+    margin-top: 4rem;
+    margin-right: 4rem;
+    font-size: $fuente-muy-grande !important;
+    color: map-get($color, $key: 3) !important;
+
+    &:hover {
+        background-color: transparent !important;
+        color: map-get($color, $key: 2) !important;
+    }
+}

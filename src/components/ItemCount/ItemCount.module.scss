@@ -1,0 +1,74 @@
+@import '/src/styles/styles.scss';
+
+.Item {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+}
+
+.ItemAgregar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ItemStockContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $fuente-grande;
+}
+
+.ItemStock {
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    background-color: map-get($color, $key: 102);
+    border-radius: 10px;
+    font-size: $fuente-muy-grande;
+    font-weight: 400;
+}
+
+.ItemCount {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin-top: 1rem;
+    background-color: map-get($color, $key: 102);
+    border-radius: 10px !important;
+}
+
+.ItemCountBoton {
+    font-size: $fuente-mediana !important;
+    color: map-get($color, $key: 3) !important;
+    background-color: transparent !important;
+
+    &:hover {
+        color: map-get($color, $key: 2) !important;
+    }
+}
+
+.ItemCountCantidad {
+    display: flex;
+    justify-content: center;
+    font-size: $fuente-grande;
+    font-weight: 900;
+    width: 3.5rem;
+    color: map-get($color, $key: 7);
+}
+
+.ItemCountAgregarBoton {
+    @extend .ItemCount;
+    height: 3rem !important;
+    font-size: $fuente-mediana !important;
+    color: map-get($color, $key: 3) !important;
+
+    &:hover {
+        background-color: map-get($color, $key: 102) !important;
+        color: map-get($color, $key: 2) !important;
+    }
+}

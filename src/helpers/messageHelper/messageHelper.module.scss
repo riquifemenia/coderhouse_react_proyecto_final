@@ -1,0 +1,67 @@
+@import '/src/styles/styles.scss';
+@import 'animate.css';
+
+.MessageToast {
+
+  background-color: map-get($color, $key: 204) !important;
+  color: map-get($color, $key: 7) !important;
+  border-radius: 6px;
+  font-size: 16px;
+  animation-duration: 1.5s !important;
+  animation-name: slideInFromBottom !important;
+  animation-delay: 3s;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.MessagePopupPopup {
+  background-color: map-get($color, $key: 204) !important;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.MessageButton {
+  color: map-get($color, 4) !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 16px !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+.MessageConfirmButton {
+  @extend .MessageButton;
+  background-color: map-get($color, 7) !important;
+}
+
+.MessageCancelButton {
+  @extend .MessageButton;
+  background-color: map-get($color, 3) !important;
+}
+
+.MessagePopupAnimateShow {
+  animation: bounceInUp;
+  animation-duration: 1.5s;
+}
+
+.MessagePopupAnimateHide {
+  animation: bounceOutRight;
+  animation-duration: 1.5s;
+}

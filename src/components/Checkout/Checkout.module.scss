@@ -1,0 +1,116 @@
+@import '/src/styles/styles.scss';
+
+.Checkout {
+  display: flex;
+  justify-content: space-between;
+  background-color: map-get($color, $key: 3);
+  padding-top: 3rem;
+}
+
+.CheckoutContainer {
+  margin: 5rem;
+  padding: 3rem;
+  border-radius: 6px;
+  background-color: map-get($color, $key: 202);
+}
+
+.CheckoutTitulo {
+  color: map-get($color, $key: 3);
+  height: 7rem !important;
+  font-size: 22px !important;
+}
+
+.CheckoutForm {
+  padding-inline: 4rem;
+}
+
+.CheckoutInput {
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  outline: none !important;
+  border-radius: 0% !important;
+  padding-bottom: 0.5rem;
+  height: 3rem !important;
+  margin-bottom: 2rem;
+  font-size: 16px !important;
+}
+
+.CheckoutButton {
+  height: 4rem !important;
+  font-size: 16px !important;
+}
+
+.CheckoutButtonFinalizar {
+  @extend .CheckoutButton;
+  width: 24rem;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 7) !important;
+
+  &:hover {
+    color: map-get($color, $key: 204) !important;
+    background-color: map-get($color, $key: 207) !important;
+  }
+}
+
+.CheckoutButtonSeguir {
+  @extend .CheckoutButton;
+  width: 100% !important;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 6) !important;
+
+  &:hover {
+    background-color: map-get($color, $key: 206) !important;
+    color: map-get($color, $key: 204) !important;
+  }
+}
+
+.CheckoutButtonVaciar {
+  @extend .CheckoutButton;
+  width: 100% !important;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 3) !important;
+
+  &:hover {
+    background-color: map-get($color, $key: 203) !important;
+    color: map-get($color, $key: 204) !important;
+  }
+}
+
+.CheckoutButtonVaciarIcon {
+  margin-right: 1rem;
+}
+
+.CartTableHead {
+  tr {
+    height: 5rem !important;
+  }
+
+  th {
+    font-size: 16px !important;
+    text-transform: none !important;
+    color: map-get($color, $key: 3);
+  }
+}
+
+.CheckoutBody {
+  border-color: map-get($color, $key: 202);
+  border-width: 2px !important;
+  font-size: 18px;
+
+  td {
+    border-color: map-get($color, $key: 202);
+    border-style: solid;
+    border-width: 2px 0;
+  }
+
+}
+
+.CheckoutInputWithError {
+  height: 4rem;
+  margin-bottom: 3rem;
+}
+
+.CheckoutErrorMsg {
+  color: map-get($color, $key: 3);
+  font-size: 16px;
+}

@@ -1,12 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './styles/styles.scss'
+import { BrowserRouter } from 'react-router-dom'
+import { ChakraProvider } from '@chakra-ui/react'
+import { CartContextProvider } from './contexts/CartContext/CartContext'
 import { App } from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <CartContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </CartContextProvider>
+    </ChakraProvider>
   </React.StrictMode>
 
 )

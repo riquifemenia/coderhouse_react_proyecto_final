@@ -1,0 +1,49 @@
+@import '/src/styles/styles.scss';
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: map-get($color, $key: 4);
+  height: 8rem;
+  font-size: $fuente-muy-grande;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.NavBarLink {
+  color: map-get($color, $key: 7) !important;
+  text-decoration: none;
+  padding-left: 2rem;
+
+  &:hover {
+    color: map-get($color, $key: 2) !important;
+    text-decoration: none !important;
+  }
+}
+
+.NavBarBrand {
+  @extend .NavBarLink;
+  text-align: center;
+  font-size: $fuente-mediana;
+  font-weight: bold;
+  color: map-get($color, $key: 3) !important;
+}
+
+.NavBarBrandImage {
+  height: 3rem;
+}
+
+.NavBarMenu {
+  margin-left: 4rem;
+  margin-right: auto
+}
+
+.NavBarCartWidget {
+  color: map-get($color, $key: 3) !important;
+  margin-right: 2rem;
+}

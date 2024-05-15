@@ -1,0 +1,10 @@
+@import '/src/styles/styles.scss';
+
+.ItemList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+    background-color: map-get($color, $key: 3);
+}

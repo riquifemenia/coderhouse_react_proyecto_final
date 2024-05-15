@@ -1,0 +1,23 @@
+@import '/src/styles/styles.scss';
+
+.CartWidgetIcon {
+    font-size: 3.5rem;
+    color: map-get($color, $key: 3)
+}
+
+.CartWidgetBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    background-color: map-get($color, $key: 204) !important;
+    color: map-get($color, $key: 3) !important;
+    font-size: 20px !important;
+    position: absolute;
+    top: -5px;
+    right: -16px;
+    border-radius: 50% !important;
+    height: 2.8rem;
+    width: 2.8rem;
+}

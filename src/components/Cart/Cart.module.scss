@@ -1,0 +1,139 @@
+@import '/src/styles/styles.scss';
+
+.Cart {
+  display: flex;
+  justify-content: space-between;
+  background-color: map-get($color, $key: 3);
+  padding-top: 3rem;
+}
+
+.CartTableContainer {
+  width: 70%;
+  margin: 5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: map-get($color, $key: 202);
+}
+
+.CartTableHead {
+  tr {
+    height: 5rem !important;
+  }
+
+  th {
+    font-size: 16px !important;
+    text-transform: none !important;
+    color: map-get($color, $key: 3);
+  }
+}
+
+.CartTableBody {
+  td {
+    border-color: map-get($color, $key: 202);
+    border-style: solid;
+    border-width: 2px 0;
+    font-size: 16px;
+    height: 6rem !important;
+  }
+
+  tr:first-child {
+    border-top: 2px !important;
+  }
+
+  tr:nth-child(odd) {
+    background-color: map-get($color, $key: 204);
+  }
+
+  tr:nth-child(even) {
+    background-color: map-get($color, $key: 4);
+  }
+
+  tr:last-child {
+    background-color: map-get($color, $key: 202) !important;
+    border-color: map-get($color, $key: 202) !important;
+    border-style: none !important;
+  }
+}
+
+.CartTableBodyDeleteButtom {
+  font-size: 15px !important;
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: map-get($color, $key: 5) !important;
+  }
+}
+
+.CartResumenContainer {
+  width: 30%;
+  margin: 5rem;
+  margin-left: 0rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: map-get($color, $key: 202);
+}
+
+.CartResumenHead {
+  @extend .CartTableHead;
+
+  th {
+    height: 7rem !important;
+    font-size: 22px !important;
+  }
+}
+
+.CartResumenBody {
+  border-color: map-get($color, $key: 202);
+  border-width: 2px !important;
+  font-size: 18px;
+
+  td {
+    border-color: map-get($color, $key: 202);
+    border-style: solid;
+    border-width: 2px !important;
+  }
+}
+
+.CartResumenButton {
+  height: 4rem !important;
+  width: 100% !important;
+  font-size: 16px !important;
+}
+
+.CartResumenButtonFinalizar {
+  @extend .CartResumenButton;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 7) !important;
+
+  &:hover {
+    color: map-get($color, $key: 204) !important;
+    background-color: map-get($color, $key: 207) !important;
+
+  }
+}
+
+.CartResumenButtonSeguir {
+  @extend .CartResumenButton;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 6) !important;
+
+  &:hover {
+    background-color: map-get($color, $key: 206) !important;
+    color: map-get($color, $key: 204) !important;
+  }
+}
+
+.CartResumenButtonVaciar {
+  @extend .CartResumenButton;
+  color: map-get($color, $key: 4) !important;
+  background-color: map-get($color, $key: 3) !important;
+
+  &:hover {
+    background-color: map-get($color, $key: 203) !important;
+    color: map-get($color, $key: 204) !important;
+  }
+}
+
+.CartResumenButtonVaciarIcon {
+  margin-right: 1rem;
+}
