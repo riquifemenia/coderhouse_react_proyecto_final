@@ -1,39 +1,15 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { getProductDetailById } from '../../data/asyncMock'
+import { useProductDetail } from '../../hooks/useDataManager/useDataManager.js'
 import { ItemDetail } from '../../components/ItemDetail/ItemDetail'
 import { Loader } from '../../components/Loader/Loader'
-import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 
 export const ItemDetailContainer = () => {
-  const [detail, setDetail] = useState({})
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-  const { itemId } = useParams()
 
-  useEffect(() => {
-    setLoading(true);
-    getProductDetailById(itemId)
-      .then((prod) => {
-        prod
-          ? (setDetail(prod), setError(null))
-          : setError('Error 404. Página inexistente.')
-      })
-      .catch((error) => setError(error.message))
-      .finally(() => setLoading(false))
-  }, [])
-
+  const { detail, loading } = useProductDetail()
 
   return (
     <>
-      {error ? (
-        <ErrorMessage message={error} />
-      ) : (
-        <>
-          <ItemDetail {...detail} />
-          {loading && <Loader />}
-        </>
-      )}
+      <ItemDetail {...detail} />
+      {loading && <Loader />}
     </>
   )
 }

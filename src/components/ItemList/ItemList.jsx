@@ -6,13 +6,15 @@ export const ItemList = ({ products }) => {
 
   return (
     <>
-      <Flex className={styles.ItemList}>
-        {products.map((elem) => (
-          <Box key={elem.id}>
-            <Item {...elem} />
-          </Box>
-        ))}
-      </Flex>
+      {products &&
+        <Flex className={styles.ItemList}>
+          {products.map((elem) => (
+            <Box key={elem.id}>
+              <Item {...elem} />
+            </Box>
+          ))}
+        </Flex>
+      }
     </>
   )
 }

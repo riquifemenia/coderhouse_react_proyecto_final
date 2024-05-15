@@ -58,21 +58,21 @@
     color: map-get($color, $key: 3);
 }
 
-.ItemDetailStock {
+.ItemDetailCount {
+    width: 60%;
     margin-right: auto;
-    font-size: $fuente-grande !important;
-    color: map-get($color, $key: 3) !important;
+    margin-left: 3rem;
 }
 
-.ItemDetailAgregar {
-    margin-left: auto;
-}
-
-.ItemDetailAgregarBoton {
-    font-size: $fuente-mediana !important;
+.ItemDetailFinalizar {
+    height: 4rem !important;
+    margin-top: 4rem;
+    margin-right: 4rem;
+    font-size: $fuente-muy-grande !important;
     color: map-get($color, $key: 3) !important;
 
     &:hover {
-        background-color: map-get($color, $key: 5) !important;
+        background-color: transparent !important;
+        color: map-get($color, $key: 2) !important;
     }
 }

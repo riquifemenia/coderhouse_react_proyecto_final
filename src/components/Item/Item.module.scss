@@ -24,9 +24,15 @@
 
 .ItemTitulo {
     text-align: center;
-    height: 6rem;
+    height: 4rem;
     font-size: 20px;
     color: map-get($color, $key: 7);
+}
+
+.ItemPrecioDetalle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .ItemPrecio {
@@ -35,24 +41,17 @@
 }
 
 .ItemVerDetalleBoton {
-    font-size: $fuente-mediana !important;
+    font-size: $fuente-grande !important;
     color: map-get($color, $key: 3) !important;
-    margin-left: auto;
+    // margin-left: auto;
+    margin-top: 1rem;
 
     &:hover {
-        background-color: map-get($color, $key: 5) !important;
+        color: map-get($color, $key: 2) !important;
     }
 }
 
-.ItemAgregar {
-    margin-left: auto;
-}
-
-.ItemAgregarBoton {
-    font-size: $fuente-mediana !important;
-    color: map-get($color, $key: 3) !important;
-
-    &:hover {
-        background-color: map-get($color, $key: 5) !important;
-    }
+.ItemFooter {
+    display: flex;
+    justify-content: center !important;
 }
