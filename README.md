@@ -15,16 +15,14 @@ Este es el proyecto de una aplicación web desarrollada en React utilizando Vite
 
 ## Capturas de pantalla
 
-Aquí hay algunas capturas de pantalla de la aplicación:
-
+Página de inicio con vista de los productos disponibles
 ![Página de Inicio](screenshots/homepage.png)
-_Página de inicio donde los usuarios pueden explorar las donas disponibles._
 
+Vista del carrito de compras donde los usuarios pueden revisar y modificar sus pedidos
 ![Carrito de Compras](screenshots/cart.png)
-_Vista del carrito de compras donde los usuarios pueden revisar y modificar sus pedidos._
 
+Vista del formulario final para comletar la compra
 ![Carga de datos y confirmación](screenshots/checkout.png)
-_Vista del formulario final para comletar la compra._
 
 ## Instalación y uso
 
@@ -57,16 +55,11 @@ Si quieres contribuir a este proyecto, sigue estos pasos:
 - HTML
 - CSS
 - JavaScript
-
 - ChakraUI
 - SweetAlert2
 - Animated.css
 - Firebase
 
-## Créditos
+## Créditos y licencia
 
-Este proyecto fue desarrollado por Ricardo Femenía. Versiòn con fines educativos.Las marcas y logotipos no son reales.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Versión con fines educativos. Las marcas y logotipos no son reales. Este proyecto está bajo licencia MIT. Consulta el archivo `LICENSE` para más detalles.
