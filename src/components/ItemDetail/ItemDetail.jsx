@@ -22,7 +22,7 @@ export const ItemDetail = ({ id, nombre, precio, img, stock, descripcion, catego
 
   return (
     <>
-      {id && nombre && precio && img && stock && descripcion && categoria ? (
+      {id && nombre && precio && img && descripcion && categoria ? (
         <Flex className={styles.ItemDetail}>
           <Card className={styles.ItemDetailCard}>
             <CardBody>
